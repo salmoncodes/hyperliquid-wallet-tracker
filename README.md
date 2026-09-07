@@ -1,6 +1,6 @@
-# ⚡ Hyperliquid Smart Money & Whale Tracker (Telegram Bot)
+# ⚡ Hyperliquid Wallet & Smart Money Tracker (Telegram Bot)
 
-A high-performance, real-time **Telegram Whale & Smart Money Tracker** for [Hyperliquid Perpetuals](https://hyperliquid.xyz). 
+A high-performance, real-time **Telegram Wallet & Smart Money Tracker** for [Hyperliquid Perpetuals](https://hyperliquid.xyz). 
 
 Inspired by institutional alert channels like **Mirrorly**, this bot allows you to add any Hyperliquid address via Telegram and delivers instant, zero-latency alerts whenever that wallet opens, sizes up, scales out, or closes positions — complete with notional values, entry prices, profits, ROI %, leverage, and interactive action buttons.
 
@@ -20,7 +20,7 @@ Inspired by institutional alert channels like **Mirrorly**, this bot allows you 
   - `📋 Tracked Wallets`: List all tracked addresses, toggle alerts (pause/resume), or delete with 1 tap.
   - `📊 Live Positions Viewer`: Tabular breakdown of all open perp positions, leverage, and unrealized PnL for any trader.
   - `🏆 Top Whales Leaderboard`: Scans the Hyperliquid market in real-time for high-volume active whales with 1-click "Track This Trader" buttons.
-  - `⚙️ Trade Size Filter`: Set minimum USD trade filters (`/filter 10000`) to filter out noise and focus on big whale moves.
+  - `⚙️ Trade Size Filter`: Set minimum USD trade filters (`/filter 10000`) to filter out noise and focus on high-conviction moves.
   - `🧪 Live Alert Simulator`: Run `/demo` to test and preview formatted alert feeds anytime.
 - **🔒 Privacy & Admin Security**: Option to restrict the bot to your private user ID or allowed list of chats.
 - **💾 Local SQLite Database**: Fast, zero-dependency persistence for your watchlists, preferences, and alert history.
@@ -176,7 +176,7 @@ All unit tests and live Hyperliquid mainnet API queries will run and verify.
                                                           │ ──────────────────────── │
                                                           │ • DM & Channel Alerts    │
                                                           │ • Interactive Keyboards  │
-                                                          │ • 1-Click Whale Tracking │
+                                                          │ • 1-Click Wallet Tracking│
                                                           └──────────────────────────┘
 ```
 
@@ -189,12 +189,12 @@ To run the bot 24/7 in the background:
 ### Using PM2:
 ```bash
 npm install -g pm2
-pm2 start "bun run start" --name "hl-whale-tracker"
+pm2 start "bun run start" --name "hl-wallet-tracker"
 pm2 save
 pm2 startup
 ```
 
 ### Logs & Monitoring:
 ```bash
-pm2 logs hl-whale-tracker
+pm2 logs hl-wallet-tracker
 ```
